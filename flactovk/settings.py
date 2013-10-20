@@ -126,7 +126,8 @@ INSTALLED_APPS = (
     'social.apps.django_app.default',
     'flactovk.flactovk',
     'flactovk.frontend',
-    'jfu'
+    'jfu',
+    'gunicorn'
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
