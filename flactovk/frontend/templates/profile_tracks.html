@@ -10,20 +10,12 @@
         <thead>
             <tr>
                 <td>Файл</td>
-                <td>Конвертировано в mp3</td>
-                <td>Загружено на vk</td>
             </tr>
         </thead>
         <tbody>
             {% for track in request.user.track_set.all %}
                 <tr>
                     <td><a href="{{ track.flac.url }}">{{ track.flac_name }}</a></td>
-                    <td>
-                        {{ track.has_mp3 }}
-                    </td>
-                    <td>
-                        <span class="glyphicon glyphicon-minus-sign"></span>
-                    </td>
                 </tr>
             {% endfor %}
         </tbody>
