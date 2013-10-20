@@ -1,0 +1,19 @@
+body {
+padding: 30px;
+}
+
+.navbar {
+margin-bottom: 30px;
+}
+
+.fileinput-button {
+    margin-top: 4px !important;
+}
+
+.clear {
+    clear: both !important;
+}
+
+.padded {
+    padding-left: 15px;
+}

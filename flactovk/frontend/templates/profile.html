@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">Загрузка</a></li>
+        <li><a href="{% url 'tracks' %}">Мои треки</a></li>
+    </ul>
+    <h1>Загрузка треков в формате flac</h1>
+    {% load jfutags %}
+    <div class="padded">
+        {% jfu 'my_uploader.html' 'jfu_upload' %}
+    </div>
+{% endblock %}

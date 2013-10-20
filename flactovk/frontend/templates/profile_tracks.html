@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul class="nav nav-pills">
+        <li ><a href="{% url 'profile' %}">Загрузка</a></li>
+        <li class="active"><a href="#">Мои треки</a></li>
+    </ul>
+    <h1>Мои треки</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Файл</td>
+                <td>Конвертировано в mp3</td>
+                <td>Загружено на vk</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for track in request.user.track_set.all %}
+                <tr>
+                    <td><a href="{{ track.flac.url }}">{{ track.flac_name }}</a></td>
+                    <td>
+                        {{ track.has_mp3 }}
+                    </td>
+                    <td>
+                        <span class="glyphicon glyphicon-minus-sign"></span>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
